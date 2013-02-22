@@ -1,0 +1,10 @@
+<% if @feed_items.any? %>
+
+	<ol class="microposts">
+		<%# When you pass the collection parameter, need to say partial: 'url' %>
+		<%= render partial: 'shared/feed_item', collection: @feed_items %>
+	</ol>
+
+	<%= will_paginate @feed_items %>
+
+<% end %>
